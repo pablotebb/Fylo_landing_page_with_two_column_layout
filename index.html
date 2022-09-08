@@ -10,6 +10,7 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+
     <!-- Own styles -->
     <link rel="stylesheet" href="./styles.css" />
 
@@ -50,7 +51,10 @@
             and co-workers.
           </p>
           <form class="header-web__form" action="#">
-            <input type="text" />
+            <div>
+              <input type="text" placeholder="Enter your email" />
+              <div class="error1">Please check your email</div>
+            </div>
             <input type="submit" value="Get Started" />
           </form>
         </div>
@@ -78,6 +82,7 @@
             >See how Fylo works
             <img src="./images/icon-arrow.svg" alt="icon arrow"
           /></a>
+          <!-- CARD -->
           <div class="section-stay-productive-card">
             <img
               class="section-stay-productive-card__quotes"
@@ -115,7 +120,10 @@
           </p>
         </article>
         <form class="section-get-early-access__form" action="#">
-          <input type="text" />
+          <div>
+            <input type="text" placeholder="email@example.com" />
+            <div class="error2">Please check your email</div>
+          </div>
           <input type="submit" value="Get Started For Free" />
         </form>
       </section>
@@ -151,7 +159,11 @@
             <li><a href="#">Privacy</a></li>
           </ul>
         </section>
-        <section class="section-social-networks"></section>
+        <section class="section-social-networks">
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-icon name="logo-twitter"></ion-icon>
+          <ion-icon name="logo-instagram"></ion-icon>
+        </section>
       </footer>
     </main>
 
@@ -164,5 +176,18 @@
         >. Coded by <a href="#" target="_blank">Pablo Belda</a>.
       </p>
     </aside>
+
+    <!-- ICONOS -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- MAIN JS -->
+    <script src="./js/main.js"></script>
   </body>
 </html>

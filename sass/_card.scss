@@ -1,0 +1,39 @@
+@use "variables";
+
+.section-stay-productive-card {
+  width: 80%;
+  padding: 20px;
+  box-shadow: 0 0 20px variables.$Light-Gray;
+  margin: 50px auto 90px;
+  &__quotes {
+  }
+  &__description {
+    font-size: 0.66em;
+    margin-bottom: 20px;
+  }
+  &__data-ceo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    img {
+      width: 29px;
+      height: 29px;
+      border-radius: 50%;
+    }
+    div {
+      h3 {
+        font-size: 0.7em;
+      }
+      p {
+        font-size: 0.44em;
+      }
+    }
+  }
+}
+
+@media (min-width: variables.$Width-media) {
+  .section-stay-productive-card {
+    margin-left: 0;
+    width: 34%;
+  }
+}

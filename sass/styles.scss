@@ -1,0 +1,169 @@
+@use "variables";
+@use "initial";
+@use "footer";
+@use "mixins";
+@use "sections";
+@use "card";
+
+.main-container {
+  // border: 1px solid red;
+  width: variables.$Width-mobile;
+  height: variables.$Height-mobile;
+  margin: 0 auto 16px;
+}
+
+@media (min-width: variables.$Width-media) {
+  .main-container {
+    width: variables.$Width-desktop;
+    height: variables.$Height-desktop;
+  }
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 12px 12px 10px;
+  &__logo {
+    width: 70px;
+    height: 18px;
+    @include mixins.width_desktop(165px, 53px);
+  }
+  &__menu {
+    display: flex;
+    gap: 20px;
+    // border: 1px solid blue;
+    @include mixins.width_desktop(
+      // width
+      301px,
+      // height
+      22px,
+      // font-size
+      1.4em,
+      // color
+      variables.$Bright-Blue,
+      // gap
+      70px
+    );
+    // gap: 70px;
+    ul {
+      font-size: 0.7em;
+      a {
+        text-decoration: none;
+        color: variables.$Desaturated-Blue;
+      }
+    }
+  }
+}
+
+@media (min-width: variables.$Width-media) {
+  .nav-header {
+    padding: 35px 12px 12px 10px;
+  }
+}
+
+.header-web {
+  &__ilustration {
+    width: 100%;
+  }
+  &__title {
+    padding: 25px 25px 25px 20px;
+    font-family: variables.$Font-family-header;
+    color: variables.$Very-Dark-Blue;
+    // font-size: 1.3em;
+    font-size: 1.4em;
+    text-align: center;
+    font-weight: 700;
+    line-height: 30px;
+  }
+  &__description {
+    // border: 1px solid red;
+    text-align: center;
+    // width: 250px;
+    width: 320px;
+    margin: 0 auto 20px;
+    // font-size: 0.7em;
+    font-size: 0.95em;
+    color: variables.$Very-Dark-Blue;
+    line-height: 20px;
+  }
+  &__form {
+    // border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 70%;
+    height: 90px;
+    margin: auto;
+    div {
+      input[type="text"] {
+        @include mixins.form_input;
+      }
+      input[type="text"]::placeholder {
+        @include mixins.form_input_placeholder;
+      }
+      .error1 {
+        display: none;
+        @include mixins.error(variables.$Carmesi);
+      }
+    }
+    input[type="submit"] {
+      @include mixins.send_button();
+    }
+  }
+}
+
+@media (min-width: variables.$Width-media) {
+  .header-web {
+    // border: 1px solid green;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 300px;
+
+    &__ilustration {
+      width: 528px;
+    }
+    div {
+      // border: 1px solid red;
+      width: 795px;
+      padding-left: 0;
+      margin-left: 0;
+    }
+    &__title {
+      margin-left: 0;
+      padding-left: 0;
+      font-size: 3em;
+      line-height: 55px;
+      text-align: left;
+    }
+    &__description {
+      width: 87%;
+      // border: 1px solid green;
+      margin-left: 0;
+      text-align: left;
+      font-size: 1.3em;
+      line-height: 25px;
+    }
+    &__form {
+      // border: 1px solid red;
+      width: 80%;
+      margin-left: 0;
+      flex-direction: row;
+      div {
+        // border: 1px solid blue;
+        width: 70%;
+        input[type="text"] {
+          width: 100%;
+          height: 40px;
+        }
+      }
+      input[type="submit"] {
+        // border: 1px solid black;
+        width: 40%;
+        flex-grow: 1;
+        height: 40px;
+      }
+    }
+  }
+}

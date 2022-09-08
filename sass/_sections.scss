@@ -1,0 +1,141 @@
+@use "variables";
+@use "mixins";
+
+.section-stay-productive {
+  margin-top: 160px;
+  &__ilustration {
+    width: 100%;
+  }
+  &__title {
+    margin: 90px 0 40px;
+    font-family: variables.$Font-family-header;
+    font-size: 1em;
+    text-align: center;
+    color: variables.$Very-Dark-Blue;
+    font-weight: 700;
+  }
+  &__description {
+    font-size: 0.95em;
+    color: variables.$Very-Dark-Blue;
+    margin-bottom: 35px;
+    line-height: 20px;
+  }
+  &__link {
+    // border: 1px solid red;
+    padding-bottom: 5px;
+    width: 45%;
+    margin: auto;
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.8em;
+    text-decoration: none;
+    border-bottom: 1px solid variables.$Moderate-Cyan;
+    color: variables.$Moderate-Cyan;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: variables.$Width-media) {
+  .section-stay-productive {
+    display: flex;
+    flex-direction: row-reverse;
+    &__ilustration {
+      width: 528px;
+      height: 500px;
+    }
+    article {
+      // border: 1px solid red;
+    }
+    &__title {
+      // border: 1px solid blue;
+      text-align: left;
+      font-size: 3em;
+      line-height: 55px;
+    }
+    &__description {
+      width: 92%;
+      font-size: 1.3em;
+      line-height: 25px;
+    }
+    &__link {
+      // border: 1px solid red;
+      font-size: 1.1em;
+      width: 205px;
+      margin-left: 0;
+      text-align: left;
+    }
+  }
+}
+
+.section-get-early-access {
+  background-color: variables.$Desaturated-Blue;
+  color: variables.$White;
+  height: 350px;
+  padding: 50px 20px 40px 40px;
+  article {
+  }
+  &__title {
+    font-size: 1.2em;
+    margin-bottom: 17px;
+    text-align: center;
+  }
+  &__description {
+    font-size: 0.9em;
+    text-align: center;
+    margin-bottom: 27px;
+  }
+  &__form {
+    // border: 1px solid red;
+    width: 230px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    div {
+      input[type="text"] {
+        width: 100%;
+        @include mixins.form_input;
+      }
+      input[type="text"]::placeholder {
+        @include mixins.form_input_placeholder;
+      }
+      .error2 {
+        display: none;
+        @include mixins.error(variables.$White);
+      }
+    }
+    input[type="submit"] {
+      width: 100%;
+      @include mixins.send_button();
+    }
+  }
+}
+
+@media (min-width: variables.$Width-media) {
+  .section-get-early-access {
+    display: flex;
+    align-items: center;
+    article {
+      // border: 1px solid red;
+      width: 640px;
+    }
+    &__title {
+      // border: 1px solid green;
+      text-align: left;
+      font-size: 2.1em;
+    }
+    &__description {
+      text-align: left;
+      font-size: 1.3em;
+    }
+    &__form {
+      // border: 1px solid black;
+      width: 460px;
+      gap: 12px;
+      input[type="submit"] {
+        width: 40%;
+      }
+    }
+  }
+}

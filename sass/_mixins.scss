@@ -1,0 +1,57 @@
+@use "variables";
+
+@mixin width_desktop(
+  $width: unset,
+  $height: unset,
+  $FontSize: unset,
+  $Color: unset,
+  $Gap: unset
+) {
+  @media (min-width: variables.$Width-media) {
+    // border: 1px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: $width;
+    font-weight: 700;
+    height: $height;
+    font-size: $FontSize;
+    color: $Color;
+    $gap: $Gap;
+  }
+}
+
+@mixin form_input {
+  height: 37px;
+  width: 100%;
+  border-radius: 3px;
+  border-color: variables.$Desaturated-Blue;
+  outline: none;
+  padding-left: 16px;
+}
+
+@mixin form_input_placeholder {
+  color: variables.$Light-Gray;
+  padding-left: 1px;
+}
+
+@mixin error($Color: unset) {
+  font-size: 0.7em;
+  color: $Color;
+  // border: 1px solid red;
+  margin-top: 0;
+}
+
+@mixin send_button() {
+  height: 37px;
+  background-color: variables.$Bright-Blue;
+  color: variables.$White;
+  font-size: 0.8em;
+  font-weight: 700;
+  border: none;
+  border-radius: 3px;
+  &:hover {
+    cursor: pointer;
+    filter: brightness(150%);
+  }
+}
