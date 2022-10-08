@@ -2,27 +2,28 @@
 
 .section-stay-productive-card {
   width: 80%;
-  padding: 20px;
-  box-shadow: 0 0 20px variables.$Light-Gray;
-  margin: 50px auto 90px;
-  &__quotes {
-  }
+  padding: 1.25rem;
+  box-shadow: 0 0 1.25rem variables.$Light-Gray;
+  margin: 3.125rem auto 5.625rem;
   &__description {
-    font-size: 0.66em;
-    margin-bottom: 20px;
+    // border: 1px solid;
+    font-size: 0.68em;
+    line-height: 20px;
+    color: variables.$Very-Dark-Blue;
+    margin-bottom: 1.25rem;
   }
   &__data-ceo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0.625rem;
     img {
-      width: 29px;
-      height: 29px;
+      width: 1.8125rem;
+      height: 1.8125rem;
       border-radius: 50%;
     }
     div {
       h3 {
-        font-size: 0.7em;
+        font-size: 0.8em;
       }
       p {
         font-size: 0.44em;
@@ -34,6 +35,12 @@
 @media (min-width: variables.$Width-media) {
   .section-stay-productive-card {
     margin-left: 0;
-    width: 34%;
+    width: 66%;
+    &__description {
+      // border: 1px solid;
+      font-size: 1.2em;
+      line-height: 23px;
+      margin-bottom: 1.25rem;
+    }
   }
 }
