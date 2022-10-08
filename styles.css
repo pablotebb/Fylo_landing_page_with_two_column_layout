@@ -119,10 +119,12 @@ body {
   line-height: 1.25rem;
 }
 .section-stay-productive__link {
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem;
   padding-bottom: 0.3125rem;
-  width: 45%;
+  width: 8.6875rem;
   margin: auto;
-  display: block;
   margin-top: 1.25rem;
   text-align: center;
   font-size: 0.8em;
@@ -131,7 +133,10 @@ body {
   color: hsl(170deg, 45%, 43%);
   font-weight: 700;
 }
-.section-stay-productive__link:hover {
+.section-stay-productive__link a {
+  text-decoration: none;
+}
+.section-stay-productive__link a:hover {
   cursor: pointer;
   color: hsla(170deg, 45%, 43%, 0.756);
 }
@@ -162,7 +167,7 @@ body {
   }
   .section-stay-productive__link {
     font-size: 1.1em;
-    width: 12.8125rem;
+    width: 182px;
     margin-left: 0;
     text-align: left;
   }
